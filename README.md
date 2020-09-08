@@ -42,7 +42,7 @@ Once you have these services created we can get started with using the SDKs
 Make a directory and install the ibm-watson node package
 ```npm install ibm-watson@^5.7.0``` 
 
-### Step 1: Playing with NLU - Instantiate an authenticator 
+### Part 1: Playing with NLU - Instantiate an authenticator 
 Let's get started by creating a simple `nlu_example1.js` file 
 In this file you will be extracting metadata such as concepts, keywords, categories, sentiment, and emotion from the url `www.nytimes.com`
 
@@ -101,7 +101,7 @@ Once you add your service credentials you should be able to analyze with NLU.
 
 See[nlu_example1](https://github.com/pmmistry/WatsonSDK_Workshop/blob/master/nlu_example/nlu_example1.js) for more details
 
-### Step 2: Using .env files 
+### Part 2: Using .env files 
 You can also authenticate to a service by automatically allowing credentials to be read from an environment file. 
 
  
@@ -154,19 +154,35 @@ See[nlu_example2](https://github.com/pmmistry/WatsonSDK_Workshop/blob/master/nlu
 
 [nlu_example3](https://github.com/pmmistry/WatsonSDK_Workshop/blob/master/nlu_example/nlu_example3.js) also has an example that authenticates using the `ibm-credentials.env` file with text file data . 
 
-Feel free to play around with more NLU API and configurations found in the [Natural Language API DOCs](https://cloud.ibm.com/apidocs/natural-language-understanding?code=node) as well as any other services that are supported by the SDK. Other services can be found in the [API & SDK reference library](https://cloud.ibm.com/docs?tab=api-docs&category=ai) 
+Feel free to play around with more NLU API and configurations found in the [Natural Language API Docs](https://cloud.ibm.com/apidocs/natural-language-understanding?code=node) as well as any other services that are supported by the SDK. Other services can be found in the [API & SDK reference library](https://cloud.ibm.com/docs?tab=api-docs&category=ai) 
 
 ![](./images/img7.png)
 
 
-### Step 3: NLU demo 
-Now that you are familiar with 
+### Part 3: NLU demo 
+Now that you are familiar with using the Node SDK lets create a NLU Node Demo project. 
 
+#### Step 1. Clone Repo 
+Clone this repo into your directory : https://github.com/IBM/natural-language-understanding-code-pattern
 
+#### Step 2. Download `.env` file and add to repo
+ ![](./images/img8.png)
 
-### Authentication 
+#### Step 3. Install the dependencies
+```npm install```
 
-### API Docs 
+#### Step 4. Build the application
+```npm run build```
+
+#### Step 5. Run the application
+```npm run dev```
+
+#### Step 6. View the application in a browser 
+Your browser will point to `localhost:5000`
+
+![](./images/img9.png)
+
+You can follow [these steps](https://github.com/IBM/natural-language-understanding-code-pattern#deploying-to-ibm-cloud-as-a-cloud-foundry-application) on this repo to deploy application to the cloud 
 
 
 ## Let's Get Started with Python 
@@ -176,5 +192,15 @@ Now that you are familiar with
 
 
 ## Demos & Resources 
+
+### API Docs 
+ - 
+ - 
+ - 
+
+### Demos 
+ - 
+ - 
+ - 
 
 
