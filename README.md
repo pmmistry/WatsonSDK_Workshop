@@ -221,8 +221,43 @@ Add your API Key and URL from NLU Credentials
 
 
 ### Part 2.Using .env files 
+You can also authenticate to a service by automatically allowing credentials to be read from an environment file.  Download the `ibm-credentials.env` file from the credentials page and try running this python file 
+
+```import json
+from ibm_watson import NaturalLanguageUnderstandingV1
+from ibm_watson.natural_language_understanding_v1 import Features, EntitiesOptions, KeywordsOptions
+
+
+service = NaturalLanguageUnderstandingV1(
+    version='2018-03-16')
+service.set_service_url('https://gateway.watsonplatform.net/natural-language-understanding/api')
+
+response = service.analyze(
+    text='Bruce Banner is the Hulk and Bruce Wayne is BATMAN! '
+    'Superman fears not Banner, but Wayne.',
+    features=Features(entities=EntitiesOptions(),
+                      keywords=KeywordsOptions())).get_result()
+
+print(json.dumps(response, indent=2))
+```
 
 ### Part 3. Jupyter Notebook Demo 
+This jupyter notebook will parse wikipedia and analyze text using NLU
+
+To run note book , download [wiki-nlu parse.ipynb](https://github.com/pmmistry/WatsonSDK_Workshop/blob/master/nluPython_examples/wiki-nlu%20parse.ipynb) 
+
+We will be running jupyter notebooks locally so make sure you have Jupyter installed: https://jupyter.org/install 
+
+Run 
+`jupyter notebook` 
+
+Find or upload [wiki-nlu parse.ipynb](https://github.com/pmmistry/WatsonSDK_Workshop/blob/master/nluPython_examples/wiki-nlu%20parse.ipynb)  
+
+Add credentials from NLU service credentials and run each cell 
+![](./images/img10.png)
+
+
+You should be able to see the output of the analyzed wikipedia. Feel free to change the query.
 
 ## Code Patterns & Resources 
 
@@ -237,6 +272,3 @@ Add your API Key and URL from NLU Credentials
  - [Visual Recognition](https://github.com/IBM/visual-recognition-code-pattern)
  - [Discovery](https://github.com/watson-developer-cloud/discovery-nodejs)
  - [Assistant](https://github.com/watson-developer-cloud/assistant-demo)
-
-
-
