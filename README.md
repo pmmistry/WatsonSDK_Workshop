@@ -1,4 +1,4 @@
-# WatsonSDK_Workshop
+# Watson SDK Workshop
 ![](./images/img0.png)
 
  Watson SDKs abstract much of the complexity associated with application development. By providing programming interfaces in languages that you already know, they can help you get up and running quickly with IBM Watson services. 
