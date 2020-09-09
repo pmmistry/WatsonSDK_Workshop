@@ -42,7 +42,7 @@ Once you have these services created we can get started with using the SDKs
 Make a directory and install the ibm-watson node package
 ```npm install ibm-watson@^5.7.0``` 
 
-### Part 1: Playing with NLU - Instantiate an authenticator 
+### Part 1: Playing with NLU in Node - Instantiate an authenticator 
 Let's get started by creating a simple `nlu_example1.js` file 
 In this file you will be extracting metadata such as concepts, keywords, categories, sentiment, and emotion from the url `www.nytimes.com`
 
@@ -186,21 +186,57 @@ You can follow [these steps](https://github.com/IBM/natural-language-understandi
 
 
 ## Let's Get Started with Python 
+This SDK is tested with Python versions 3.5 and up.  All official documentation on the Python SDK is found [here](https://github.com/watson-developer-cloud/python-sdk)
 
-### Authentication 
+###  Installation 
+Make a directory and install using pip or easy_install:
+```pip install --upgrade ibm-watson```
+or 
+```easy_install --upgrade ibm-watson```
+
+### Part 1. Playing with NLU in Python - Instantiate an authenticator 
+Let's get started by creating a simple `nlu_example1.py` file 
+
+```import json
+from ibm_watson import NaturalLanguageUnderstandingV1
+from ibm_cloud_sdk_core.authenticators import IAMAuthenticator
+from ibm_watson.natural_language_understanding_v1 import Features, CategoriesOptions
 
 
+authenticator = IAMAuthenticator('<apiKey>')
+natural_language_understanding = NaturalLanguageUnderstandingV1(
+    version='2019-07-12',
+    authenticator=authenticator
+)
+natural_language_understanding.set_service_url('<URL>')
 
-## Demos & Resources 
+response = natural_language_understanding.analyze(
+    url='www.ibm.com',
+    features=Features(categories=CategoriesOptions(limit=3))).get_result()
+
+print(json.dumps(response, indent=2))
+```
+
+Add your API Key and URL from NLU Credentials 
+
+
+### Part 2.Using .env files 
+
+### Part 3. Jupyter Notebook Demo 
+
+## Code Patterns & Resources 
 
 ### API Docs 
- - 
- - 
- - 
+ - [Watson Assistant Docs](https://cloud.ibm.com/docs/watson?topic=watson-using-sdks)
+ - [API & SDK reference library](https://cloud.ibm.com/docs?tab=api-docs&category=ai)
+ - [Watson Developer Cloud](https://github.com/watson-developer-cloud)
 
-### Demos 
- - 
- - 
- - 
+### Code Patterns 
+ - [Speech to Text](https://github.com/IBM/speech-to-text-code-pattern)
+ - [Text to Speech](https://github.com/IBM/text-to-speech-code-pattern)
+ - [Visual Recognition](https://github.com/IBM/visual-recognition-code-pattern)
+ - [Discovery](https://github.com/watson-developer-cloud/discovery-nodejs)
+ - [Assistant](https://github.com/watson-developer-cloud/assistant-demo)
+
 
 
