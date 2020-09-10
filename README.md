@@ -6,11 +6,10 @@
  ## Supported SDKs
  The following Watson SDKs are supported by IBM. You can find all SDKs [here](https://github.com/watson-developer-cloud)
 
- - [Android SDK](https://github.com/watson-developer-cloud/android-sdk)
- - [Go SDK](https://github.com/watson-developer-cloud/go-sdk)
- - [Java SDK](https://github.com/watson-developer-cloud/java-sdk)
  - [Node.js SDK](https://github.com/watson-developer-cloud/node-sdk)
  - [Python SDK](https://github.com/watson-developer-cloud/python-sdk)
+ - [Java SDK](https://github.com/watson-developer-cloud/java-sdk)
+ - [Go SDK](https://github.com/watson-developer-cloud/go-sdk)
  - [Ruby SDK](https://github.com/watson-developer-cloud/ruby-sdk)
  - [.NET SDK](https://github.com/watson-developer-cloud/dotnet-standard-sdk)
  - [Swift SDK](https://github.com/watson-developer-cloud/swift-sdk)
